@@ -1,0 +1,28 @@
+# Environment & Config
+.env
+config.local.php
+
+# Dependencies
+/vendor/
+/node_modules/
+
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+error_log
+
+# OS files
+.DS_Store
+desktop.ini
+
+# Uploads (user-generated content)
+/uploads/*
+!/uploads/.gitkeep
