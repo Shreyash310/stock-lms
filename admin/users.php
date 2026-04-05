@@ -97,7 +97,7 @@ if ($viewUser > 0) {
 <?php
 } else {
     // List all users
-    $users = $db->query('SELECT u.*, (SELECT COUNT(*) FROM progress p WHERE p.user_id = u.id AND p.status = "completed") as completed_chapters, (SELECT ROUND(AVG(r.score * 100.0 / r.total)) FROM results r WHERE r.user_id = u.id AND r.total > 0) as avg_score FROM users ORDER BY u.created_at DESC')->fetchAll();
+    $users = $db->query("SELECT u.*, (SELECT COUNT(*) FROM progress p WHERE p.user_id = u.id AND p.status = 'completed') as completed_chapters, (SELECT ROUND(AVG(r.score * 100.0 / r.total)) FROM results r WHERE r.user_id = u.id AND r.total > 0) as avg_score FROM users u ORDER BY u.created_at DESC")->fetchAll();
 
     $pageTitle = 'Users';
     $currentPage = 'admin-users';
